@@ -11,8 +11,10 @@ public class Soldier extends Actor
     //public boolean - allowing for single key press
     public boolean upD = false; 
     public boolean downD = false;
-    public boolean spaceD = false;
-
+    public boolean initialkey = false;
+    String[] verbs = {"run","walk","crawl","suck","build"};
+    String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
+    String[] adj = {"stupid","small","big","goofy","special"};
     public void act() // Move Actor Up and down by 200 cells
     {
         if (Greenfoot.isKeyDown("up") && upD ==false) {
@@ -35,16 +37,43 @@ public class Soldier extends Actor
             setLocation(50, 100);
         }
         // Fire bullet
-        if (Greenfoot.isKeyDown("space") && spaceD ==false){
-            spaceD = true;
+        int r= (int)(Math.random() * 4);
+        for (int i=0;i<=(verbs[r].length()-1);i++){
+            if (Greenfoot.isKeyDown(String(verbs[r].charAt(i))) && initialkey==false){
+                initialkey = true;
 
-            Greenfoot.playSound("bullet.wav"); // play sound
+                Greenfoot.playSound("bullet.wav"); // play sound
 
-            Bullet Bullet = new Bullet();
-            getWorld().addObject(Bullet, getX(), getY());
+                Bullet Bullet = new Bullet();
+                getWorld().addObject(Bullet, getX(), getY());
+            }
+            else if (!Greenfoot.isKeyDown("space") ==true)
+                initialkey = false;
         }
-        else if (!Greenfoot.isKeyDown("space") ==true)
-            spaceD = false;
+        for (int i=0;i<=(nouns[r].length()-1);i++){
+            if (Greenfoot.isKeyDown(String(verbs[r].charAt(i))) && initialkey==false){
+                initialkey = true;
+
+                Greenfoot.playSound("bullet.wav"); // play sound
+
+                Bullet Bullet = new Bullet();
+                getWorld().addObject(Bullet, getX(), getY());
+            }
+            else if (!Greenfoot.isKeyDown("space") ==true)
+                initialkey = false;
+        }
+        for (int i=0;i<=(adj[r].length()-1);i++){
+            if (Greenfoot.isKeyDown(String(verbs[r].charAt(i))) && initialkey==false){
+                initialkey = true;
+
+                Greenfoot.playSound("bullet.wav"); // play sound
+
+                Bullet Bullet = new Bullet();
+                getWorld().addObject(Bullet, getX(), getY());
+            }
+            else if (!Greenfoot.isKeyDown("space") ==true)
+                initialkey = false;
+        }
 
         Actor Alien =getOneIntersectingObject(Alien.class);   
 

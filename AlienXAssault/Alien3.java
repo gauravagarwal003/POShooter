@@ -13,7 +13,7 @@ public class Alien3 extends Actor
     }
     {
         move (SPEED); //calls SPEED function
-
+        String[] adj = {"stupid","small","big","goofy","special"};
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
         if (Bullet !=null) {

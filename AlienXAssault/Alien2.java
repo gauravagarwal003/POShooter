@@ -15,7 +15,7 @@ public class Alien2 extends Actor
     public void act() 
     {
         move (SPEED); //calls SPEED function
-
+        String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
         if (Bullet !=null) {

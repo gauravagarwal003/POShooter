@@ -9,7 +9,7 @@ public class Alien extends Actor
     public void act() 
     {
         move (SPEED); //calls SPEED function
-
+        String[] verbs = {"run","walk","crawl","suck","build"};
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
         
         // If alien touches left side of screen - Game Over
