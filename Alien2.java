@@ -14,6 +14,8 @@ public class Alien2 extends Actor
 
     public void act() 
     {
+        int tempType = ((int)(Math.random() * 3));
+        
         move (SPEED); //calls SPEED function
 
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
