@@ -9,24 +9,33 @@ public class Alien extends Actor
     public Alien() {
     }
     
+    public int randomNumber(){
+        int tempType = (int)((Math.random() * 2) + 1);
+        return tempType;
+    }
+    
     public void act() 
     {
         move (SPEED);
 
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
         boolean isSeen = false;
-        int tempType;
+        int tempType = randomNumber();
         
         if (isSeen = false){
             isSeen = true;
-            tempType = (int)((Math.random() * 2) + 1);
+            tempType = randomNumber();
         }
         
         if (tempType == 2){
             setImage("Soldier.png");
             isSeen = false;
         }
-        else{
+        else if(tempType == 1){
+            setImage("Alien.png");
+            isSeen = false;
+        }
+        else if(tempType == 3){
             setImage("Alien.png");
             isSeen = false;
         }
