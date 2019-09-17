@@ -21,11 +21,11 @@ public class SpaceLand extends World
         }
         int Alien2 = Greenfoot.getRandomNumber(101);
         if (Alien2 >99) {
-            addObject(new Alien(), 1000, 100);
+            addObject(new Alien2(), 1000, 100);
         }
         int Alien3 = Greenfoot.getRandomNumber(101);
         if (Alien3 >99) {
-            addObject(new Alien(), 1000, 500);
+            addObject(new Alien3(), 1000, 500);
         }
     }
 }

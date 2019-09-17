@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien2 extends Actor
 {
-    int SPEED = -7; // Speed of 10 in left direction "-"
+    int SPEED = -2; // Speed of 10 in left direction "-"
     public Alien2() {
     }
 
@@ -16,6 +16,7 @@ public class Alien2 extends Actor
     {
         move (SPEED); //calls SPEED function
         String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
+        GreenfootImage image = new GreenfootImage(nouns[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
         if (Bullet !=null) {

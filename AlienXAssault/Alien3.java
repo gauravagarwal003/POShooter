@@ -8,12 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien3 extends Actor
 {
-    int SPEED = -7; // Speed of 10 in left direction "-"
+    int SPEED = -2; // Speed of 10 in left direction "-"
     public Alien3() {
     }
     {
         move (SPEED); //calls SPEED function
         String[] adj = {"stupid","small","big","goofy","special"};
+        GreenfootImage image = new GreenfootImage(adj[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
         if (Bullet !=null) {
