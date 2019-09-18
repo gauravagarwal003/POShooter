@@ -15,9 +15,9 @@ public class Soldier extends Actor
     String[] verbs = {"run","walk","crawl","suck","build"};
     String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
     String[] adj = {"stupid","small","big","goofy","special"};
-    boolean v = false;
-    boolean n = false;
-    boolean a - false;
+    public boolean v = false;
+    public boolean n = false;
+    public boolean a = false;
     public void act() // Move Actor Up and down by 200 cells
     {
         if (Greenfoot.isKeyDown("up") && upD ==false) {
@@ -95,5 +95,8 @@ public class Soldier extends Actor
             getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();
         }    
+    }
+    public boolean getV() {
+        return v;
     }
 }
