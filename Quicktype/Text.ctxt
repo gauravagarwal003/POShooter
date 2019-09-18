@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Text
+comment0.text=\n\ Actor\ class\ for\ printing\ text\ on\ the\ screen.\n\ \n\ @author\ Andrew\ Bochkarev\n
+comment1.params=text\ size
+comment1.target=Text(java.lang.String,\ int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Text.\n
+numComments=2

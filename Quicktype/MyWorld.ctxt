@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MyWorld
+comment0.text=\n\ Contains\ and\ controls\ all\ the\ Words,\ checks\ for\ user\ input\ and\ for\ typing\ mistakes,\ manages\ difficulty.\n\ \n\ @author\ Andrew\ Bochkarev\n\ \n
+comment1.params=
+comment1.target=MyWorld()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Gets\ user\ input\ and\ checks\ it\ for\ mistakes,\ manages\ creation/deletion\ of\ Words.\n
+comment3.params=delay
+comment3.target=void\ spawnNewWord(int)
+comment3.text=\n\ Spawns\ a\ new\ word\ after\ (int\ delay)\ time.\n\ \n\ @param\ delay\n\ \ \ \ \ \ Amount\ of\ frames\ until\ the\ next\ word\ should\ be\ added\ to\ the\ world.\n
+comment4.params=x\ y
+comment4.target=void\ cleanText(int,\ int)
+comment4.text=\n\ Clears\ a\ textfield\ at\ (int\ x,\ int\ y)\ coordinates.\n\ \n\ @param\ x\n\ \ \ \ \ \ Coordinate\ on\ x-axis.\n\ @param\ y\n\ \ \ \ \ \ Coordinate\ on\ y-axis.\n
+comment5.params=text\ x\ y\ size
+comment5.target=void\ placeText(java.lang.String,\ int,\ int,\ int)
+comment5.text=\n\ Prints\ text\ using\ Text().\ Adds\ new\ Text\ object\ if\ the\ spot\ is\ empty,\ otherwise\ changes\ object's\ image.\n\ \n\ @param\ text\n\ \ \ \ \ \ Text\ to\ be\ written.\n\ \ \ \ \ \ \n\ @param\ x,\ y\n\ \ \ \ \ \ Coordinates\ at\ which\ to\ place\ the\ text.\n\ \ \ \ \ \ \n\ @param\ size\n\ \ \ \ \ \ Size\ of\ the\ text.\n
+comment6.params=changeDif\ changeDelay
+comment6.target=void\ changeDifficulty(int,\ int)
+comment6.text=\n\ Changes\ difficulty.\n\ \n\ @param\ changeDif\n\ \ \ \ \ \ +/-int,\ for\ decreasing\ or\ increasing\ difficulty,\ respectively.\n\ \ \ \ \ \ \n\ @param\ changeDelay\n\ \ \ \ \ \ +/-int,\ for\ increasing\ or\ decreasing\ delay\ between\ spawning\ new\ words.\n
+numComments=7

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Finish
+comment0.text=\n\ Finish\ line.\ Counts\ lives\ and\ manages\ end\ of\ the\ game.\n\ \n\ @author\ Andrew\ Bochkarev\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Counts\ lives\ and\ manages\ end\ of\ the\ game.\n
+numComments=2

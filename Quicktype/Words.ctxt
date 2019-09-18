@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Words
+comment0.text=\n\ Stores\ and\ manages\ all\ words,\ moves\ them\ around.\n\ \n\ @author\ Andrew\ Bochkarev\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=start\ end
+comment2.target=int\ getRandomNumber(int,\ int)
+comment2.text=\n\ Gets\ random\ number\ between\ (int\ start)\ and\ (int\ end),\ including\ the\ borders.\n\ \n\ @param\ start\n\ \ \ \ \ \ First\ possible\ value.\n\ @param\ end\n\ \ \ \ \ \ Last\ possible\ value.\n\ @return\n\ \ \ \ \ \ Returns\ a\ random\ number\ between\ these\ borders.\n
+comment3.params=s\ m\ l
+comment3.target=void\ chooseWord(boolean,\ boolean,\ boolean)
+comment3.text=\n\ Chooses\ a\ list\ depending\ on\ user\ preferences,\ and\ takes\ a\ word\ from\ it.\n\ \n\ @param\ s\n\ \ \ \ \ \ Boolean\ showing\ if\ short\ list\ is\ selected\n\ @param\ m\n\ \ \ \ \ \ Boolean\ showing\ if\ medium\ list\ is\ selected\n\ @param\ l\n\ \ \ \ \ \ Boolean\ showing\ if\ long\ list\ is\ selected\n
+comment4.params=filename
+comment4.target=java.util.List\ loadFile(java.lang.String)
+comment4.text=\n\ Loads\ the\ text\ of\ the\ file\ with\ the\ given\ filename.\ Do\ not\ change\ this.\n\ \n\ @param\ filename\n\ \ \ \ \ \ The\ name\ of\ the\ file\ that\ should\ be\ loaded.\n\ \n\ @return\n\ \ \ \ \ \ Returns\ a\ list\ of\ Strings\ consisting\ of\ the\ text\ of\ the\ file.\n\ \ \ \ \ \ Each\ line\ of\ the\ file\ is\ a\ new\ element\ of\ the\ list.\n
+numComments=5
