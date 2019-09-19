@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SpaceLand extends World
 {
     Score score;
-    int onlyShoot = 1;
+    POS pos;
     public SpaceLand()
     {    
         super(900, 600, 1, false); 
@@ -11,7 +11,9 @@ public class SpaceLand extends World
         addObject (new Soldier(), 50, 300);
         
         score = new Score();
+        pos = new POS();
         addObject(score, 500, 25);
+        addObject(pos,150,25);
     }
     public void act ()
     {
@@ -19,7 +21,6 @@ public class SpaceLand extends World
         if (Alien >99) {
             addObject(new Alien(), 1000, 300);
         }
-        /**
         int Alien2 = Greenfoot.getRandomNumber(101);
         if (Alien2 >99) {
             addObject(new Alien(), 1000, 100);
@@ -28,7 +29,6 @@ public class SpaceLand extends World
         if (Alien3 >99) {
             addObject(new Alien(), 1000, 500);
         }
-        **/
     }
 }
 

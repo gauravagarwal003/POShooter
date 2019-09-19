@@ -9,15 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alien2 extends Actor
 {
     int SPEED = -7; // Speed of 10 in left direction "-"
+    
     public Alien2() {
     }
 
-    public void act() 
-    {
-        int tempType = ((int)(Math.random() * 3));
-        
-        move (SPEED); //calls SPEED function
+    public void act() {
 
+        move (SPEED); //calls SPEED function
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
         if (Bullet !=null) {

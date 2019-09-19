@@ -47,7 +47,7 @@ public class Soldier extends Actor
             spaceD = false;
 
         Actor Alien =getOneIntersectingObject(Alien.class);   
-
+/**
         if(Alien != null) {
             Greenfoot.playSound("game_over.mp3");
             GameOver gameover = new GameOver();
@@ -55,5 +55,6 @@ public class Soldier extends Actor
             getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();
         }    
+        **/
     }
 }
