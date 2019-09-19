@@ -8,6 +8,7 @@ public class Alien extends Actor
     int tempType = (int)(Math.random() * ((2-0) + 1));
     int controlType = 0;
     int moduleThree = 0;
+    long lastAdded = System.currentTimeMillis();
     
     public Alien() {
     
@@ -15,6 +16,23 @@ public class Alien extends Actor
     
     public void act() {
        move (SPEED);
+       long curTime = System.currentTimeMillis();
+       if (curTime >= lastAdded + 5000) //5000ms = 5s
+       {
+           controlType++;
+           moduleThree = controlType % 3;
+       }
+       
+       if(moduleThree == 0){
+               ((SpaceLand)(getWorld())).pos.swap("bee");
+           }
+       else if(moduleThree  == 1){
+               ((SpaceLand)(getWorld())).pos.swap("alien");
+           }
+       else if(moduleThree  == 2){
+               ((SpaceLand)(getWorld())).pos.swap("soldier");   
+       }
+       /**
        for (int i = 0; i<=10;i = i+1) 
        {
            if(i == 10) {
@@ -33,6 +51,7 @@ public class Alien extends Actor
            }
         
        } 
+       **/
        Actor Bullet = getOneIntersectingObject(Bullet.class); 
 
        if (tempType == 2) {
