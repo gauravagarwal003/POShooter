@@ -12,12 +12,14 @@ public class Soldier extends Actor
     public boolean upD = false; 
     public boolean downD = false;
     public boolean initialkey = false;
-    String[] verbs = {"run","walk","crawl","suck","build"};
-    String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
-    String[] adj = {"stupid","small","big","goofy","special"};
-    public boolean v = false;
-    public boolean n = false;
-    public boolean a = false;
+    public String[] words = {"run","walk","crawl","suck","build", "fortnite", "shield", "school", "tree", "mouse", "stupid","small","big","goofy","special"};
+    public int r= (int)(Math.random() * 4);
+    public String[] getwords(){
+        return words;
+    }
+    public int getindex(){
+        return r;
+    }
     public void act() // Move Actor Up and down by 200 cells
     {
         if (Greenfoot.isKeyDown("up") && upD ==false) {
@@ -40,51 +42,18 @@ public class Soldier extends Actor
             setLocation(50, 100);
         }
         // Fire bullet
-        int r= (int)(Math.random() * 4);
-        System.out.println(r);
-        if (v==true){
-            for (int i=0;i<(verbs[r].length()-1);i++){
-                if (Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) && initialkey==false){
-                    initialkey = true;
+        
+        for (int i=0;i<(words[r].length()-1);i++){
+            if (Greenfoot.isKeyDown(String.valueOf((words[r].charAt(i)))) && initialkey==false){
+                initialkey = true;
 
-                    Greenfoot.playSound("bullet.wav"); // play sound
+                Greenfoot.playSound("bullet.wav"); // play sound
 
-                    Bullet Bullet = new Bullet();
-                    getWorld().addObject(Bullet, getX(), getY());
-                }
-                else if (!Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) == true){
-                    initialkey = false;
-                }
+                Bullet Bullet = new Bullet();
+                getWorld().addObject(Bullet, getX(), getY());
             }
-        }
-        if (n == true){
-            for (int i=0;i<(nouns[r].length()-1);i++){
-                if (Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) && initialkey==false){
-                    initialkey = true;
-
-                    Greenfoot.playSound("bullet.wav"); // play sound
-
-                    Bullet Bullet = new Bullet();
-                    getWorld().addObject(Bullet, getX(), getY());
-                }
-                else if (!Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) == true){
-                    initialkey = false;
-                }
-            }
-        }
-        if (a == true){
-            for (int i=0;i<(adj[r].length()-1);i++){
-                if (Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) && initialkey==false){
-                    initialkey = true;
-
-                    Greenfoot.playSound("bullet.wav"); // play sound
-
-                    Bullet Bullet = new Bullet();
-                    getWorld().addObject(Bullet, getX(), getY());
-                }
-                else if (!Greenfoot.isKeyDown(String.valueOf((verbs[r].charAt(i)))) == true){
-                    initialkey = false;
-                }
+            else if (!Greenfoot.isKeyDown(String.valueOf((words[r].charAt(i)))) == true){
+                initialkey = false;
             }
         }
         Actor Alien =getOneIntersectingObject(Alien.class);   
@@ -95,8 +64,5 @@ public class Soldier extends Actor
             getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();
         }    
-    }
-    public boolean getV() {
-        return v;
     }
 }

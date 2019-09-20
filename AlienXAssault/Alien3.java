@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alien3 extends Actor
 {
     int SPEED = -2; // Speed of 10 in left direction "-"
+    Soldier sold;
     public Alien3() {
         
     }
@@ -10,52 +11,38 @@ public class Alien3 extends Actor
     public void act() 
     {
         move (SPEED); //calls SPEED function
-        String[] adj = {"stupid","small","big","goofy","special"};
+        String[] words = sold.words;
         Actor Bullet = getOneIntersectingObject(Bullet.class); 
-        GreenfootImage image = new GreenfootImage(adj[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);
-        int tempType = (int)((Math.random() * 3) + 1);
-        if (tempType == 3) {
-           setImage(image);
-        }
-        else {
-           setImage("Alien.png");
-        }
-
+        GreenfootImage image = new GreenfootImage(words[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);
+        setImage(image);
+        int index = sold.r;
+        int health = words[index].length() - 1;
         // If alien touches left side of screen - Game Over
          if (getX()<0) {
-            if (tempType == 3){
                 Greenfoot.playSound("game_over.mp3");
                 GameOver gameover = new GameOver();
                 getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
                 Greenfoot.stop();
-            }   
-            else {
-            }
         }
         // If Bullet touches alien - Game Over
+        
         if (Bullet !=null) {
-            if (tempType==3){
+            health--;
+            if (health==0){
                 Greenfoot.playSound("explosion.wav");
                 getWorld(). removeObject(Bullet);
 
                 ((SpaceLand)(getWorld())).score.add(50);
 
                 getWorld(). removeObject(this); //remove alien from screen 
-        
-            }
-        
-            else if (tempType == 1){
-            
-            }
-            else if (tempType == 2){
-            
-            }
-            else {
                 Greenfoot.playSound("game_over.mp3");
                 GameOver gameover = new GameOver();
                 getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
                 Greenfoot.stop();
             }
         }
+}
+public void addedToWorld(World world){
+     sold = getWorld().getObjects(Soldier.class);
 }
 }

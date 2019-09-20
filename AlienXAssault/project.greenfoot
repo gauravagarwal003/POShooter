@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Sep 18 09:52:19 PDT 2019
+#Fri Sep 20 09:26:11 PDT 2019
 editor.fx.0.height=0
 target2.width=80
 target8.name=Alien2
@@ -24,8 +24,8 @@ target4.y=0
 dependency10.from=SpaceLand
 target4.x=0
 dependency6.type=UsesDependency
-target9.type=ClassTarget
 target4.showInterface=false
+target9.type=ClassTarget
 target2.y=0
 target2.x=0
 target10.type=ClassTarget
@@ -59,8 +59,8 @@ target2.height=50
 target2.typeParameters=
 target6.type=ClassTarget
 dependency11.to=Score
-target9.typeParameters=
 dependency11.from=SpaceLand
+target9.typeParameters=
 dependency7.type=UsesDependency
 version=3.0.0
 editor.fx.0.y=0
@@ -71,8 +71,8 @@ dependency1.from=Alien
 mainWindow.y=161
 mainWindow.x=86
 target5.showInterface=false
-target8.showInterface=false
 dependency5.from=Alien3
+target8.showInterface=false
 target7.typeParameters=
 target2.name=Bullet
 class.s.image=Soldier.png
