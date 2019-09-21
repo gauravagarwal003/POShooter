@@ -11,6 +11,10 @@ public class POS extends Actor
     public POS() {
         swap("noun");
     }
+    /**
+     * used to display current mode onto screen
+     * swap is used by other actors like Alien to change mode
+     */
     public void swap(String change) 
     {
        pos = change;

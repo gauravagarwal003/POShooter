@@ -4,4 +4,5 @@ comment1.params=
 comment1.target=Alien()
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Central\ code\ that\ affects\ everything\r\n\ Moves\ aliens,\ sets\ overall\ mode\ of\ game,\ sets\ mode/type\ of\ each\ alien,\ communicates\ with\ POS\ actor,\ etc.\r\n\ \r\n
 numComments=3

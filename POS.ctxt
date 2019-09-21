@@ -5,4 +5,5 @@ comment1.params=
 comment1.target=POS()
 comment2.params=change
 comment2.target=void\ swap(java.lang.String)
+comment2.text=\r\n\ used\ to\ display\ current\ mode\ onto\ screen\r\n\ swap\ is\ used\ by\ other\ actors\ like\ Alien\ to\ change\ mode\r\n
 numComments=3
