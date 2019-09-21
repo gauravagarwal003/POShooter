@@ -2,8 +2,11 @@
 comment0.target=SpaceLand
 comment1.params=
 comment1.target=SpaceLand()
+comment1.text=\r\n\ Creates\ the\ space\ world\ which\ is\ made\ along\ with\ the\ Soldier\ and\ score\r\n
 comment2.params=
-comment2.target=Soldier\ getV()
+comment2.target=Soldier\ getsold()
+comment2.text=\r\n\ Supposed\ to\ get\ the\ objects\ of\ Soldier\ but\ we\ weren't\ able\ to\ get\ it\ to\ work.\r\n
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\r\n\ Creates\ the\ "aliens"(words)\ to\ spawn\ from\ the\ right\ side\ of\ the\ world.\r\n
 numComments=4

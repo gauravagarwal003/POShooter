@@ -8,13 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    int SPEED = 9;
-    public Bullet () {
-    }
-
+    int SPEED = 9;//speed of bullet
+    /**
+     * This class sets speed for other classes
+     */
     public void act() 
     {
-        move(SPEED);
+        move(SPEED);//speed
     }    
 }
 

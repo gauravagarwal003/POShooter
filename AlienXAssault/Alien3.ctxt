@@ -4,4 +4,5 @@ comment1.params=
 comment1.target=Alien3()
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Intended\ to\ be\ words\ that\ fly\ through\ the\ screen\ and\ makes\ the\ user\ have\ to\ type\ out\ key\ letters\ to\ kill\ them\r\n\ before\ they\ reach\ the\ death\ zone.\ Failed\ because\ we\ weren't\ able\ to\ figure\ out\ how\ to\ get\ the\ class\ to\ call\ other\r\n\ classes.\ The\ idea\ was\ that\ once\ getting\ the\ list\ from\ the\ Soldier\ class,\ the\ Alien\ actor\ would\ be\ able\ to\ use\ the\ \r\n\ values\ from\ Soldier\ to\ change\ itself\ depending\ on\ the\ action.\ This\ would\ allow\ the\ actor\ to\ lose\ health\ for\ a\ given\r\n\ word.\r\n
 numComments=3

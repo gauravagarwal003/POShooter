@@ -3,54 +3,42 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alien2 extends Actor
 {
     int SPEED = -2; // Speed of 10 in left direction "-"
-    public Alien2() {
-        
-    }
-
+/**
+ * Intended to be words that fly through the screen and makes the user have to type out key letters to kill them
+ * before they reach the death zone. Failed because we weren't able to figure out how to get the class to call other
+ * classes. The idea was that once getting the list from the Soldier class, the Alien actor would be able to use the 
+ * values from Soldier to change itself depending on the action. This would allow the actor to lose health for a given
+ * word.
+ */
     public void act() 
     {
         move (SPEED); //calls SPEED function
-        String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
-        Actor Bullet = getOneIntersectingObject(Bullet.class); 
-        GreenfootImage image = new GreenfootImage(nouns[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);
-        int tempType = (int)((Math.random() * 3) + 1);
-        if (tempType == 2) {
-           setImage(image);
-        }
-        else {
-           setImage("Alien.png");
-        }
-
+        SpaceLand spaceWorld = (SpaceLand) getWorld();//Gets objects from world
+        Soldier sold = new Soldier();
+        String[] words = sold.words;//makes string array words set to Soldier's list
+        Actor Bullet = getOneIntersectingObject(Bullet.class); //intersecting object is Bullet
+        GreenfootImage image = new GreenfootImage(words[(int)(Math.random() * 4)], 5, Color.BLACK, Color.WHITE);//makes aliens image as words
+        setImage(image);//sets alien as word
+        int index = sold.r;//gets index of list from Soldier
+        int health = words[index].length() - 1;//gets length of word and sets the health as number of letters
         // If alien touches left side of screen - Game Over
-         if (getX()<0) {
-            if (tempType == 2){
+         if (getX()<0) {//if alien reaches x-value 0 display game over screen
                 Greenfoot.playSound("game_over.mp3");
                 GameOver gameover = new GameOver();
                 getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
                 Greenfoot.stop();
-            }   
-            else {
-            }
         }
         // If Bullet touches alien - Game Over
-        if (Bullet !=null) {
-            if (tempType==2){
+        
+        if (Bullet !=null) {//if bullet hits subtract health
+            health--;
+            if (health==0){//if health is 0 alien explodes and dies and it adds to score
                 Greenfoot.playSound("explosion.wav");
                 getWorld(). removeObject(Bullet);
 
                 ((SpaceLand)(getWorld())).score.add(50);
 
                 getWorld(). removeObject(this); //remove alien from screen 
-        
-            }
-        
-            else if (tempType == 1){
-            
-            }
-            else if (tempType == 3){
-            
-            }
-            else {
                 Greenfoot.playSound("game_over.mp3");
                 GameOver gameover = new GameOver();
                 getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
@@ -58,4 +46,7 @@ public class Alien2 extends Actor
             }
         }
 }
+/*public void addedToWorld(World world){
+     sold = getWorld().getObjects(Soldier.class);
+}*/
 }
