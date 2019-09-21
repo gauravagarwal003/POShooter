@@ -9,11 +9,11 @@ public class Alien extends Actor
     int controlType = 0;
     long lastAdded = System.currentTimeMillis();
     String[] nouns = {"fortnite", "shield", "school", "tree", "mouse"};
-    GreenfootImage noun = new GreenfootImage(nouns[(int)(Math.random() * 4)], 30, Color.WHITE,null);
+    GreenfootImage noun = new GreenfootImage(nouns[(int)(Math.random() * 4)], 30, Color.WHITE, new Color(0,0,0));
     String[] verbs = {"run","walk","crawl","suck","build"};
-    GreenfootImage verb = new GreenfootImage(verbs[(int)(Math.random() * 4)], 30, Color.WHITE, null);
+    GreenfootImage verb = new GreenfootImage(verbs[(int)(Math.random() * 4)], 30, Color.WHITE, new Color(0,0,0));
     String[] adj = {"stupid","small","big","goofy","special"};
-    GreenfootImage adject = new GreenfootImage(adj[(int)(Math.random() * 4)], 30, Color.WHITE,null);
+    GreenfootImage adject = new GreenfootImage(adj[(int)(Math.random() * 4)], 30, Color.WHITE,new Color(0,0,0));
     
     public Alien() {
     
